@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="88716" started-at="2020-10-02T11:58:38 EET" finished-at="2020-10-02T12:00:07 EET">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="88716" started-at="2020-10-02T11:58:38 EET" finished-at="2020-10-02T12:00:07 EET">
+      <class name="jira.create.Create_issue">
+        <test-method status="PASS" signature="initalization()[pri:0, instance:jira.create.Create_issue@63440df3]" name="initalization" is-config="true" duration-ms="39489" started-at="2020-10-02T11:58:38 EET" finished-at="2020-10-02T11:59:17 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalization -->
+        <test-method status="PASS" signature="create_issue(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:jira.create.Create_issue@63440df3]" name="create_issue" duration-ms="12637" started-at="2020-10-02T11:59:32 EET" data-provider="userdata" finished-at="2020-10-02T11:59:45 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[first epic]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[as a user i want to login to can buy product]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[backend]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[acceptance criteria]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_issue -->
+        <test-method status="PASS" signature="view_issue()[pri:2, instance:jira.create.Create_issue@63440df3]" name="view_issue" duration-ms="17436" started-at="2020-10-02T11:59:45 EET" finished-at="2020-10-02T12:00:03 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- view_issue -->
+        <test-method status="PASS" signature="close()[pri:0, instance:jira.create.Create_issue@63440df3]" name="close" is-config="true" duration-ms="4021" started-at="2020-10-02T12:00:03 EET" finished-at="2020-10-02T12:00:07 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- jira.create.Create_issue -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
