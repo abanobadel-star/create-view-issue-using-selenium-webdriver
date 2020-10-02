@@ -16,18 +16,18 @@ public class ExcelReader {
 	public FileInputStream getFileInputStream() throws FileNotFoundException
 	{
 		String filepath= System.getProperty("user.dir")+"\\src\\test\\java\\Data\\user data.xlsx"; //to get path of excel sheet
-		File filesrc= new File(filepath);  
+		File filesrc= new File(filepath);  //get object from file
 		file=new FileInputStream(filesrc); 
 		return file;
 	}
 	public Object [][] getExcelData() throws IOException //function to get data from excel
 	{
 		file=getFileInputStream();
-		XSSFWorkbook workbook=new XSSFWorkbook(file);
+		XSSFWorkbook workbook=new XSSFWorkbook(file); 
 		XSSFSheet sheet= workbook.getSheetAt(0); //to get first sheet from excel if there more than sheet
 		int Totalnumberofrows=(sheet.getLastRowNum()+1); //to get number of rows to excel sheet 
 		int Totalnumberofcolums=4; //number of paramteres
-		String[][] arrayExceldata= new String[Totalnumberofrows][Totalnumberofcolums];
+		String[][] arrayExceldata= new String[Totalnumberofrows][Totalnumberofcolums]; 
 		for (int i = 0; i <Totalnumberofrows; i++) { //this loop to loop all paramter in execl sheet by row
 			
 			for (int j = 0; j < Totalnumberofcolums; j++) { //this loop to loop all paramter in excel sheet by coloum
