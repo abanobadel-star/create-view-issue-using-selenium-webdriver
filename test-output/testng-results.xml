@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="160236" started-at="2020-10-02T13:56:01 EET" finished-at="2020-10-02T13:58:41 EET">
+  <suite name="create" duration-ms="121437" started-at="2020-10-03T10:52:58 EET" finished-at="2020-10-03T10:55:00 EET">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="160236" started-at="2020-10-02T13:56:01 EET" finished-at="2020-10-02T13:58:41 EET">
-      <class name="jira.create.Create_issue">
-        <test-method status="PASS" signature="initalization()[pri:0, instance:jira.create.Create_issue@63440df3]" name="initalization" is-config="true" duration-ms="57955" started-at="2020-10-02T13:56:01 EET" finished-at="2020-10-02T13:56:59 EET">
+    <test name="test" duration-ms="121437" started-at="2020-10-03T10:52:58 EET" finished-at="2020-10-03T10:55:00 EET">
+      <class name="jiracreate.CreateViewissue">
+        <test-method status="PASS" signature="initalization()[pri:0, instance:jiracreate.CreateViewissue@63440df3]" name="initalization" is-config="true" duration-ms="30647" started-at="2020-10-03T10:52:58 EET" finished-at="2020-10-03T10:53:29 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initalization -->
-        <test-method status="PASS" signature="create_issue(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:jira.create.Create_issue@63440df3]" name="create_issue" duration-ms="46589" started-at="2020-10-02T13:57:28 EET" data-provider="userdata" finished-at="2020-10-02T13:58:15 EET">
+        <test-method status="PASS" signature="create_issue(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:jiracreate.CreateViewissue@63440df3]" name="create_issue" duration-ms="62372" started-at="2020-10-03T10:53:30 EET" data-provider="userdata" finished-at="2020-10-03T10:54:32 EET">
           <params>
             <param index="0">
               <value>
@@ -37,15 +37,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- create_issue -->
-        <test-method status="PASS" signature="view_issue()[pri:2, instance:jira.create.Create_issue@63440df3]" name="view_issue" duration-ms="16050" started-at="2020-10-02T13:58:15 EET" finished-at="2020-10-02T13:58:31 EET">
+        <test-method status="PASS" signature="view_issue()[pri:2, instance:jiracreate.CreateViewissue@63440df3]" name="view_issue" duration-ms="25834" started-at="2020-10-03T10:54:32 EET" finished-at="2020-10-03T10:54:58 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- view_issue -->
-        <test-method status="PASS" signature="close()[pri:0, instance:jira.create.Create_issue@63440df3]" name="close" is-config="true" duration-ms="10178" started-at="2020-10-02T13:58:31 EET" finished-at="2020-10-02T13:58:41 EET">
+        <test-method status="PASS" signature="close()[pri:0, instance:jiracreate.CreateViewissue@63440df3]" name="close" is-config="true" duration-ms="1355" started-at="2020-10-03T10:54:58 EET" finished-at="2020-10-03T10:55:00 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- jira.create.Create_issue -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- jiracreate.CreateViewissue -->
+    </test> <!-- test -->
+  </suite> <!-- create -->
 </testng-results>
