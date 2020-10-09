@@ -9,11 +9,30 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">create</th></tr>
-<tr><td><a href="#t0">test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">121,437</td><td></td><td></td></tr>
+<tr><td><a href="#t0">test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">40,182</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">create</th></tr></tbody><tbody id="t0"><tr><th colspan="4">test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">jiracreate.CreateViewissue</td><td><a href="#m0">create_issue</a></td><td rowspan="1">1601715210468</td><td rowspan="1">62372</td></tr><tr class="passedeven"><td><a href="#m1">view_issue</a></td><td rowspan="1">1601715272851</td><td rowspan="1">25834</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">create</th></tr></tbody><tbody id="t0"><tr><th colspan="4">test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">jiracreate.CreateViewissue</td><td><a href="#m0">view_issue</a></td><td rowspan="1">1601715770912</td><td rowspan="1">159</td></tr><tr><th colspan="4">test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">jiracreate.CreateViewissue</td><td><a href="#m1">create_issue</a></td><td rowspan="1">1601715759901</td><td rowspan="1">10998</td></tr></tbody>
 </table>
-<h2>test</h2><h3 id="m0">jiracreate.CreateViewissue#create_issue</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>first epic</td><td>as a user i want to login to can buy product</td><td>backend</td><td>acceptance criteria</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">jiracreate.CreateViewissue#view_issue</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>test</h2><h3 id="m0">jiracreate.CreateViewissue#view_issue</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : }
+  (Session info: chrome=85.0.4183.121): {Alert text : 
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;DESKTOP-D6E6O6F&apos;, ip: &apos;192.168.93.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\sony\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52032}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 7ed429bd250de6025f1ec9ba45855a55
+*** Element info: {Using=xpath, value=(//div[@class=&apos;css-1olrtn&apos;])[3]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at jiracreate.CreateViewissue.view_issue(CreateViewissue.java:93)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">jiracreate.CreateViewissue#create_issue</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>first epic</td><td>as a user i want to login to can buy product</td><td>backend</td><td>acceptance criteria</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

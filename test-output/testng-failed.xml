@@ -6,7 +6,6 @@
       <class name="jiracreate.CreateViewissue">
         <methods>
           <include name="initalization"/>
-          <include name="create_issue" invocation-numbers="0"/>
           <include name="close"/>
           <include name="view_issue"/>
         </methods>
