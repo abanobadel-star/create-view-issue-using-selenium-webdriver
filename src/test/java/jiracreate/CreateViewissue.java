@@ -38,18 +38,18 @@ public class CreateViewissue {
 		 driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS); //implicit wait to make page load and element
 		 driver.manage().window().maximize();    //to maximize window 
 	
-		 WebElement username=driver.findElement(By.id("username")); //to get element of username
-		 username.sendKeys("gelej67940@vmgmails.com");  //to send word in field of username
-		 WebElement submit=driver.findElement(By.id("login-submit")); //to get element of submit
-		 submit.click(); //to click on button continue    //to click on button submit
-		 WebElement password=driver.findElement(By.id("password"));
-		 password.sendKeys("123456789");
-		 WebElement login=driver.findElement(By.xpath("//button[@type='submit']"));
-		 login.click();
-		 WebElement software= driver.findElement(By.xpath("//div[@class='sc-ifAKCX xEYqw']"));
-		 software.click();
-		 WebElement project=driver.findElement(By.xpath("//img[@class='sc-bSbAYC dMTTyH']"));
-		 project.click();
+		// WebElement username=driver.findElement(By.id("username")); //to get element of username
+		// username.sendKeys("gelej67940@vmgmails.com");  //to send word in field of username
+		// WebElement submit=driver.findElement(By.id("login-submit")); //to get element of submit
+		// submit.click(); //to click on button continue    //to click on button submit
+		// WebElement password=driver.findElement(By.id("password"));
+		// password.sendKeys("123456789");
+		// WebElement login=driver.findElement(By.xpath("//button[@type='submit']"));
+		// login.click();
+		// WebElement software= driver.findElement(By.xpath("//div[@class='sc-ifAKCX xEYqw']"));
+		// software.click();
+		// WebElement project=driver.findElement(By.xpath("//img[@class='sc-bSbAYC dMTTyH']"));
+		// project.click();
 		 }
 	 
 	 @Test(priority=1,dataProvider = "userdata") //to link data from excel sheet to code
@@ -58,22 +58,22 @@ public class CreateViewissue {
 		
 		  driver.navigate().refresh();   //to refresh driver 
 		 driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS); // implicit wait to reload page and element
-		 WebElement create=driver.findElement(By.xpath("(//span[@class='css-t5emrf'])[7]")); //get element by xpath but  more than element have the same xpath create has index "7"
-		 create.click();
-		 WebElement epicname=driver.findElement(By.xpath("//input[@class='textfield text long-field']"));
+		// WebElement create=driver.findElement(By.xpath("(//span[@class='css-t5emrf'])[7]")); //get element by xpath but  more than element have the same xpath create has index "7"
+		// create.click();
+		// WebElement epicname=driver.findElement(By.xpath("//input[@class='textfield text long-field']"));
 		 epicname.click();
-		 epicname.sendKeys(Epicname1);
-		 WebElement summary=driver.findElement(By.id("summary"));
-		 summary.sendKeys(summary1);
-		 WebElement component =driver.findElement(By.id("components-textarea"));
+		// epicname.sendKeys(Epicname1);
+		// WebElement summary=driver.findElement(By.id("summary"));
+		// summary.sendKeys(summary1);
+		// WebElement component =driver.findElement(By.id("components-textarea"));
 		 component.click();
-		 component.sendKeys(component1);
-		 WebElement description=driver.findElement(By.id("description"));
+		// component.sendKeys(component1);
+		// WebElement description=driver.findElement(By.id("description"));
 		 description.sendKeys(description1);
-		 WebElement linkedissues= driver.findElement(By.id("issuelinks-linktype"));
-		 Select linkedvalue= new Select(linkedissues);
-		 linkedvalue.selectByVisibleText("is blocked by");
-		 WebElement creatbutton=driver.findElement(By.id("create-issue-submit"));
+		// WebElement linkedissues= driver.findElement(By.id("issuelinks-linktype"));
+		// Select linkedvalue= new Select(linkedissues);
+		// linkedvalue.selectByVisibleText("is blocked by");
+		// WebElement creatbutton=driver.findElement(By.id("create-issue-submit"));
 		 creatbutton.click(); 
 	 } 
 	 
