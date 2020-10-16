@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="jira.create.Create_issue">
+      <class name="com.jiracreate.tests.CreateissueTest">
         <methods>
-          <include name="close"/>
+          <include name="createissue" invocation-numbers="0"/>
+          <include name="takeScreenShotOnFailureAndClosebrowser"/>
           <include name="initalization"/>
-          <include name="view_issue"/>
         </methods>
-      </class> <!-- jira.create.Create_issue -->
+      </class> <!-- com.jiracreate.tests.CreateissueTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

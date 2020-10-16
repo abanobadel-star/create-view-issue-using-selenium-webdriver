@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [create]">
-  <test thread-count="5" name="test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="jiracreate.CreateViewissue">
+      <class name="com.jiracreate.tests.CreateissueTest">
         <methods>
+          <include name="createissue" invocation-numbers="0"/>
+          <include name="takeScreenShotOnFailureAndClosebrowser"/>
           <include name="initalization"/>
-          <include name="close"/>
-          <include name="view_issue"/>
         </methods>
-      </class> <!-- jiracreate.CreateViewissue -->
+      </class> <!-- com.jiracreate.tests.CreateissueTest -->
     </classes>
-  </test> <!-- test(failed) -->
-</suite> <!-- Failed suite [create] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

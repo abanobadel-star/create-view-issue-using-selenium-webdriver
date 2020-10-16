@@ -61,20 +61,20 @@ public class CreateViewissue {
 		// WebElement create=driver.findElement(By.xpath("(//span[@class='css-t5emrf'])[7]")); //get element by xpath but  more than element have the same xpath create has index "7"
 		// create.click();
 		// WebElement epicname=driver.findElement(By.xpath("//input[@class='textfield text long-field']"));
-		 epicname.click();
+		// epicname.click();
 		// epicname.sendKeys(Epicname1);
 		// WebElement summary=driver.findElement(By.id("summary"));
 		// summary.sendKeys(summary1);
 		// WebElement component =driver.findElement(By.id("components-textarea"));
-		 component.click();
+		// component.click();
 		// component.sendKeys(component1);
 		// WebElement description=driver.findElement(By.id("description"));
-		 description.sendKeys(description1);
+		// description.sendKeys(description1);
 		// WebElement linkedissues= driver.findElement(By.id("issuelinks-linktype"));
 		// Select linkedvalue= new Select(linkedissues);
 		// linkedvalue.selectByVisibleText("is blocked by");
 		// WebElement creatbutton=driver.findElement(By.id("create-issue-submit"));
-		 creatbutton.click(); 
+		// creatbutton.click(); 
 	 } 
 	 
 	 
@@ -90,22 +90,22 @@ public class CreateViewissue {
 			} catch(NoAlertPresentException noe) {
 			   
 			}
-		WebElement allissue=driver.findElement(By.xpath("(//div[@class='css-1olrtn'])[3]")); //get element by xpath but more than element have the same xpath allissue has index "3" 
-		allissue.click();
-		WebElement summary_text= driver.findElement(By.id("summary-val")); 
-		String actual_result=summary_text.getText(); //get acutal text of summary
-		System.out.println(actual_result);       //print actual result of summary text
-		String expected_result="as a user i want to login to can buy product"; // expected result for summary text
-		SoftAssert softassert=new SoftAssert();   //get object from softassert
-		softassert.assertEquals(actual_result, expected_result); //compare between actual result and expected result
-		WebElement assert_epic_name=driver.findElement(By.id("customfield_10011-val")); //find element of epic name
-		String actual_resut2=assert_epic_name.getText(); //get actual result for epic name
-		System.out.println(actual_resut2);  //print actual result of epic name
-		String expected_result2="first epic"; //expected result for epic name
-		softassert.assertEquals(actual_resut2, expected_result2);// compare between actual_result2 and expected_result2
+		//WebElement allissue=driver.findElement(By.xpath("(//div[@class='css-1olrtn'])[3]")); //get element by xpath but more than element have the same xpath allissue has index "3" 
+		//allissue.click();
+		//WebElement summary_text= driver.findElement(By.id("summary-val")); 
+		//String actual_result=summary_text.getText(); //get acutal text of summary
+		//System.out.println(actual_result);       //print actual result of summary text
+		//String expected_result="as a user i want to login to can buy product"; // expected result for summary text
+		//SoftAssert softassert=new SoftAssert();   //get object from softassert
+		//softassert.assertEquals(actual_result, expected_result); //compare between actual result and expected result
+		//WebElement assert_epic_name=driver.findElement(By.id("customfield_10011-val")); //find element of epic name
+		//String actual_resut2=assert_epic_name.getText(); //get actual result for epic name
+		//System.out.println(actual_resut2);  //print actual result of epic name
+		//String expected_result2="first epic"; //expected result for epic name
+		//softassert.assertEquals(actual_resut2, expected_result2);// compare between actual_result2 and expected_result2
 		 
 				 
-		softassert.assertAll();   //to apply assert to all assertion in method
+		//softassert.assertAll();   //to apply assert to all assertion in method
 	 }
 	 @AfterTest
 	 public void close()

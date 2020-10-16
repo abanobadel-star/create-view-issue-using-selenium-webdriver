@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [create]">
   <test thread-count="5" name="test(failed)">
     <classes>
-      <class name="jiracreate.CreateViewissue">
+      <class name="com.jiracreate.tests.CreateissueTest">
         <methods>
+          <include name="createissue"/>
           <include name="initalization"/>
-          <include name="close"/>
-          <include name="view_issue"/>
         </methods>
-      </class> <!-- jiracreate.CreateViewissue -->
+      </class> <!-- com.jiracreate.tests.CreateissueTest -->
     </classes>
   </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [create] -->

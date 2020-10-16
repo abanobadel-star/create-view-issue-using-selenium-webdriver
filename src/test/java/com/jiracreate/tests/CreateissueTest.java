@@ -2,9 +2,9 @@ package com.jiracreate.tests;
 
 import java.io.IOException;
 
-
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.jiracreate.pages.Createpage;
 
@@ -25,10 +25,21 @@ public class CreateissueTest extends TestBase {
 
 		}
 	 @Test(priority=1,dataProvider="userdata")
-	 public void createissue(String Epicname,String summary ,String component,String description)
+	 public void createissue(String Epicname,String summary ,String component,String description) throws InterruptedException
 	 {
 		 createobject=new Createpage(driver);
 		 createobject.createepic(Epicname, summary, component, description);
+		 Thread.sleep(2000);
+	     createobject.allissuelink.click();
+		 String actualresult1=createobject.summarytxt.getText();
+		 String expectedresult1="as a user i want to login to can buy product";
+		 SoftAssert softassert=new SoftAssert();
+		 softassert.assertEquals(actualresult1, expectedresult1);
+		 String actualresult2=createobject.assertepicname.getText();
+		 String expectedresult2="first epic";
+		 softassert.assertEquals(actualresult2, expectedresult2);
+		 softassert.assertAll();
+		 
 	 }
 
 }

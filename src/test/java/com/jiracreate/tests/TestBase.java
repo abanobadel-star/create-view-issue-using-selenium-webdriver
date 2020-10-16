@@ -1,14 +1,22 @@
 package com.jiracreate.tests;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -41,26 +49,37 @@ public class TestBase { //this class is the base "parent" for all class test "ch
 	{
 		if(browsername.equalsIgnoreCase("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "chromepath");
+			System.setProperty("webdriver.chrome.driver", chromepath);
 			driver=new ChromeDriver();
 		}
 		else if(browsername.equalsIgnoreCase("firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver", "firefoxpath");
+			System.setProperty("webdriver.gecko.driver", firefoxpath);
 			driver=new FirefoxDriver();
 		}
 		else if(browsername.equalsIgnoreCase("internetexplorer"))
 		{
-			System.setProperty("webdriver.ie.driver", "InternetExplorerpath");
+			System.setProperty("webdriver.ie.driver", InternetExplorerpath);
 			driver=new InternetExplorerDriver();
 		}
 			
-		createobject=new Createpage(driver);
 		driver.get(prop.getProperty("URL"));
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		createobject.logintojira(prop.getProperty("username"), prop.getProperty("password"));
+		 createobject=new Createpage(driver);
+		 createobject.logintojira(prop.getProperty("username"), prop.getProperty("password"));
+        driver.navigate().refresh();
 		
 	}
+	@AfterMethod    //this method take screenshot when test fail and name it with method name and parameter of method
+	public void takeScreenShotOnFailureAndClosebrowser(ITestResult testResult) throws IOException { 
+		if (testResult.getStatus() == ITestResult.FAILURE) { 
+			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 
+			FileUtils.copyFile(scrFile, new File("errorScreenshots\\" + testResult.getName() + "-"
+					+ Arrays.toString(testResult.getParameters()) + ".png"));
+		} 
+		driver.quit();
+	}
+	
 
 }
