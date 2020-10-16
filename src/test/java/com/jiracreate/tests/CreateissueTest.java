@@ -29,8 +29,8 @@ public class CreateissueTest extends TestBase {
 	 {
 		 createobject=new Createpage(driver);
 		 createobject.createepic(Epicname, summary, component, description);
-		 Thread.sleep(2000);
-	     createobject.allissuelink.click();
+		 Thread.sleep(5000);
+	     createobject.viewissue();
 		 String actualresult1=createobject.summarytxt.getText();
 		 String expectedresult1="as a user i want to login to can buy product";
 		 SoftAssert softassert=new SoftAssert();
